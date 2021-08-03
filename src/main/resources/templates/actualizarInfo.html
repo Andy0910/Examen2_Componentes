@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en-US" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"></meta>
+    <meta http-equiv="Content-Type" content="text/html"></meta>
+    <title>Actualizar Informacion</title>
+</head>
+<body>
+
+<form action="#" th:action="@{/actualizarInfo/{id}(id = ${atleta.id})}" th:object="${atleta}" method="post">
+    <p>
+        <label for="direccion">Direccion: </label>
+        <input type="text" th:field="*{direccion}" id="direccion" th:value="${atleta.direccion}">
+    </p>
+
+    <p>
+        <label for="distrito">Distrito: </label>
+        <input type="text" th:field="*{distrito}" id="distrito" th:value="${atleta.distrito}">
+    </p>
+
+    <p>
+        <label for="canton">Canton: </label>
+        <input type="text" th:field="*{canton}" id="canton" th:value="${atleta.canton}">
+    </p>
+
+    <p>
+        <label for="provincia">Provincia: </label>
+        <input type="text" th:field="*{provincia}" id="provincia" th:value="${atleta.provincia}">
+    </p>
+
+    <p>
+        <label for="email">Correo Electronico: </label>
+        <input type="text" th:field="*{email}" id="email" th:value="${atleta.email}">
+    </p>
+
+    <p>
+        <label for="telefono">Telefono</label>
+        <input type="text" th:field="*{telefono}" id="telefono" th:value="${atleta.telefono}">
+    </p>
+
+    <p>
+        <label for="peso">Peso</label>
+        <input type="text" th:field="*{peso}" id="peso" th:value="${atleta.peso}">
+    </p>
+
+
+
+    <input type="submit" value="Actualizar">
+</form>
+
+<p>
+    <a th:href="@{/}">Menu Principal</a>
+</p>
+
+</body>
+</html>

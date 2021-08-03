@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en-US" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"></meta>
+    <meta http-equiv="Content-Type" content="text/html"></meta>
+    <title>Ver Historico</title>
+</head>
+<body>
+    <h2>
+        <span th:text="${atleta.nombre}">Nombre</span>
+        <span th:text="${atleta.primerApellido}">Primer Apellido</span>
+        <span th:text="${atleta.segundoApellido}">Segundo Apellido</span>
+    </h2>
+    <h3>
+        Historial de IMC
+    </h3>
+    <table style="table-layout: fixed; width: 300px; text-align: center">
+        <tr>
+            <th>IMC</th>
+            <th>Fecha</th>
+        </tr>
+        <tr th:each="hist : ${historial}">
+            <td th:text="${hist.imc}"></td>
+            <td th:text="${hist.fecha}"></td>
+        </tr>
+    </table>
+    <p>
+        <a th:href="@{/}">Menu Principal</a>
+    </p>
+
+</body>
+</html>

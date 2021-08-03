@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en-US" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"></meta>
+    <meta http-equiv="Content-Type" content="text/html"></meta>
+    <title>Detalle</title>
+</head>
+<body>
+    <h2>
+        <span th:text="${atleta.nombre}"> </span>
+        <span th:text="${atleta.primerApellido}"> </span>
+        <span th:text="${atleta.segundoApellido}"> </span>
+    </h2>
+    <div>
+        </p>
+        <label for="nacimiento">Fecha Nacimiento: </label>
+        <span th:text="${atleta.nacimiento}" id="nacimiento">Nacimiento</span>
+
+        <p>
+            <label for="deporte">Deporte: </label>
+            <span th:text="${atleta.deporte}" id="deporte">deporte</span>
+        </p>
+        <p>
+            <label for="estatura">Estatura (cm): </label>
+            <span th:text="${atleta.estatura}" id="estatura">estatura</span>
+        </p>
+        <p>
+            <label for="peso">Peso (kg): </label>
+            <span th:text="${atleta.peso}" id="peso">peso</span>
+        </p>
+        <p>
+            <label for="rama">Rama: </label>
+            <span th:text="${atleta.rama}" id="rama">rama</span>
+        </p>
+        <p>
+            <label for="direccion">Linea Direccion: </label>
+            <span th:text="${atleta.direccion}" id="direccion">direccion</span>
+        </p>
+        <p>
+            <label for="distrito">Distrito: </label>
+            <span th:text="${atleta.distrito}" id="distrito">distrito</span>
+        </p>
+        <p>
+            <label for="canton">Canton: </label>
+            <span th:text="${atleta.canton}" id="canton">canton</span>
+        </p>
+        <p>
+            <label for="provincia">Provincia: </label>
+            <span th:text="${atleta.provincia}" id="provincia">provincia</span>
+        </p>
+        <p>
+            <label for="telefono">Telefono: </label>
+            <span th:text="${atleta.telefono}" id="telefono">telefono</span>
+        </p>
+        <p>
+            <label for="email">Correo Electronico: </label>
+            <span th:text="${atleta.email}" id="email">email</span>
+        </p>
+    </div>
+    <p>
+        <a th:href="@{/}">Menu Principal</a>
+    </p>
+
+</body>
+</html>
